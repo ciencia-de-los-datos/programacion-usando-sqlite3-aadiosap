@@ -41,4 +41,4 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 --
-SELECT CAST(c23 AS datetime),avg(c21) FROM tbl2 group by CAST(c23 AS datetime)
+select strftime('%Y', c23), avg(c21) from tbl2 group by strftime('%Y', c23)
